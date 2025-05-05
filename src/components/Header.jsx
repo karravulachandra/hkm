@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import '../styles/Header.css';
+// Import the logo directly
+import logoImage from '../assets/images/logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,13 +22,10 @@ const Header = () => {
         <div className="logo">
           <Link to="/" onClick={closeMenu}>
             <div className="logo-image">
-              <img
-                src="src/assets/images/logo.png"
-                alt="Hare Krishna Cultural Centre Temple"
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23FFD700' stroke='%23800020' stroke-width='2'/%3E%3Ctext x='50' y='65' font-family='Arial' font-size='40' text-anchor='middle' fill='%23800020'%3E☸%3C/text%3E%3C/svg%3E";
-                }}
+              <img 
+                src={logoImage} 
+                alt="Hare Krishna Cultural Centre Temple" 
+                className="logo-image"
               />
             </div>
             <div className="logo-text">
