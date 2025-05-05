@@ -1,0 +1,78 @@
+.decorative-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.divider-line {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--secondary-color), transparent);
+  flex-grow: 1;
+  max-width: 200px;
+}
+
+.divider-symbol {
+  padding: 0 1.5rem;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider-symbol svg {
+  width: 40px;
+  height: 40px;
+}
+
+.om-symbol {
+  font-family: 'Tiro Devanagari Sanskrit', serif;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+/* Lotus divider animation */
+.decorative-divider.lotus .divider-symbol svg {
+  animation: pulse 3s infinite ease-in-out;
+}
+
+/* Chakra divider animation */
+.decorative-divider.chakra .divider-symbol svg {
+  animation: spin 20s infinite linear;
+}
+
+/* Om divider animation */
+.decorative-divider.om .divider-symbol {
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+  }
+  to {
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.5);
+  }
+}

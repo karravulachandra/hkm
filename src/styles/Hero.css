@@ -1,0 +1,270 @@
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding-top: 80px; /* To account for the fixed header */
+  overflow: hidden;
+}
+
+.hero-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-text {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  position: relative;
+  border: 2px solid #FFD700;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.hero-decoration {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='12' viewBox='0 0 40 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6 L10 0 L20 6 L30 0 L40 6 L40 12 L0 12 Z' fill='%23FFD700'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+}
+
+.hero-decoration.top {
+  top: -10px;
+}
+
+.hero-decoration.bottom {
+  bottom: -10px;
+  transform: rotate(180deg);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-mantra {
+  margin-bottom: 1.5rem;
+  font-family: 'Tiro Devanagari Sanskrit', serif;
+  font-size: 1.5rem;
+  color: #fff;
+  background: linear-gradient(135deg, rgba(128, 0, 32, 0.3), rgba(255, 215, 0, 0.3));
+  padding: 1.2rem;
+  border-radius: 5px;
+  border: 1px solid #FFD700;
+  position: relative;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+}
+
+.hero-mantra::before,
+.hero-mantra::after {
+  content: '☸';
+  position: absolute;
+  color: #FFD700;
+  font-size: 1.2rem;
+}
+
+.hero-mantra::before {
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero-mantra::after {
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero-tagline {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  z-index: -1;
+  transition: transform 0.5s ease;
+}
+
+.cta-button.primary {
+  color: #fff;
+  border: none;
+}
+
+.cta-button.primary::before {
+  transform: translateX(0);
+}
+
+.cta-button.primary:hover::before {
+  transform: translateX(100%);
+  background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+}
+
+.cta-button.primary:hover {
+  box-shadow: 0 5px 15px rgba(255, 127, 0, 0.4);
+  transform: translateY(-3px);
+}
+
+.cta-button.secondary {
+  background-color: transparent;
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+}
+
+.cta-button.secondary:hover {
+  background-color: var(--secondary-color);
+  color: #333;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+.hero-quote {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.hero-quote::before,
+.hero-quote::after {
+  content: '"';
+  font-family: 'Tiro Devanagari Sanskrit', serif;
+  font-size: 3rem;
+  color: var(--secondary-color);
+  opacity: 0.5;
+  position: absolute;
+}
+
+.hero-quote::before {
+  top: -10px;
+  left: 10px;
+}
+
+.hero-quote::after {
+  bottom: -30px;
+  right: 10px;
+}
+
+.hero-quote p {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  line-height: 1.8;
+}
+
+.hero-quote span {
+  display: block;
+  text-align: right;
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .hero-quote {
+    padding: 1rem;
+  }
+}

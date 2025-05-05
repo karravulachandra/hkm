@@ -1,0 +1,3 @@
+This is a placeholder for the temple logo image. 
+Please replace this file with the actual temple image you want to use as the logo.
+The image should be named "temple-logo.jpg" or "temple-logo.png" and placed in this directory.

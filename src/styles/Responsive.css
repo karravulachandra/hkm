@@ -1,0 +1,200 @@
+/* Global Responsive Styles */
+
+/* Extra Small Devices (phones, 576px and down) */
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 2rem !important;
+  }
+  
+  .container {
+    padding: 0 1rem !important;
+  }
+  
+  /* Header */
+  .logo h1 {
+    font-size: 1.2rem !important;
+  }
+  
+  /* Hero */
+  .hero h1 {
+    font-size: 1.8rem !important;
+  }
+  
+  .hero h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  .hero-buttons {
+    flex-direction: column !important;
+    gap: 0.8rem !important;
+  }
+  
+  .hero-quote {
+    padding: 1rem !important;
+  }
+  
+  .hero-quote p {
+    font-size: 0.9rem !important;
+  }
+  
+  /* About */
+  .about-features {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Activities */
+  .activity-card {
+    padding: 1.5rem !important;
+  }
+  
+  /* Events */
+  .event-date-container {
+    padding: 0.8rem !important;
+  }
+  
+  .event-details {
+    padding: 1.5rem !important;
+  }
+  
+  /* Gallery */
+  .gallery-image-container {
+    height: 180px !important;
+  }
+  
+  /* Contact */
+  .contact-content {
+    gap: 2rem !important;
+  }
+  
+  /* Books */
+  .book-cover {
+    height: 180px !important;
+  }
+  
+  .book-details {
+    padding: 1.2rem !important;
+  }
+  
+  /* Donate */
+  .amount-options {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  
+  /* Blog */
+  .featured-image {
+    height: 200px !important;
+  }
+  
+  .featured-details h3 {
+    font-size: 1.5rem !important;
+  }
+  
+  /* Testimonials */
+  .testimonial-content {
+    padding: 1.2rem !important;
+  }
+  
+  /* FAQ */
+  .faq-question {
+    padding: 1.2rem !important;
+  }
+  
+  .faq-item.open .faq-answer {
+    padding: 0 1.2rem 1.2rem !important;
+  }
+}
+
+/* Small Devices (landscape phones, 576px to 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .section-title {
+    font-size: 2.2rem !important;
+  }
+  
+  /* Header */
+  .logo h1 {
+    font-size: 1.3rem !important;
+  }
+  
+  /* Hero */
+  .hero h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  /* Books */
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  /* Blog */
+  .posts-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Medium Devices (tablets, 768px to 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  /* About */
+  .about-content {
+    gap: 2rem !important;
+  }
+  
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  
+  /* Books */
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  /* Donate */
+  .donate-content {
+    gap: 2rem !important;
+  }
+  
+  /* Blog */
+  .blog-content {
+    gap: 2rem !important;
+  }
+}
+
+/* Large Devices (desktops, 992px to 1200px) */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .container {
+    max-width: 960px !important;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+  /* Make buttons larger for touch */
+  button, 
+  .cta-button,
+  .event-button,
+  .book-button,
+  .donate-submit-btn,
+  .read-more-btn,
+  .contact-btn {
+    padding: 0.8rem 1.8rem !important;
+    min-height: 44px !important; /* Minimum touch target size */
+  }
+  
+  /* Increase spacing between clickable elements */
+  .nav-menu li {
+    margin-left: 2rem !important;
+  }
+  
+  /* Ensure form elements are large enough for touch */
+  input, 
+  textarea, 
+  select {
+    padding: 0.8rem !important;
+    min-height: 44px !important;
+  }
+}

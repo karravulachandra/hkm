@@ -1,0 +1,196 @@
+/* Custom Animations and Transitions */
+
+/* Hover Effects */
+.activity-card,
+.event-card,
+.gallery-item,
+.book-card,
+.donation-use-item,
+.post-card,
+.feature {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-card:hover,
+.event-card:hover,
+.gallery-item:hover,
+.book-card:hover,
+.donation-use-item:hover,
+.post-card:hover,
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Hover Effects */
+.cta-button,
+.event-button,
+.book-button,
+.donate-submit-btn,
+.read-more-btn,
+.contact-btn,
+.view-all-btn,
+.subscribe-btn {
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover,
+.event-button:hover,
+.book-button:hover,
+.donate-submit-btn:hover,
+.read-more-btn:hover,
+.contact-btn:hover,
+.view-all-btn:hover,
+.subscribe-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Hover Effects */
+.gallery-image,
+.book-cover img,
+.post-image img {
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-image,
+.book-card:hover .book-cover img,
+.post-card:hover .post-image img {
+  transform: scale(1.05);
+}
+
+/* Navigation Link Hover Effect */
+.nav-menu a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #e94e24;
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+/* Pulse Animation for CTA Buttons */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hero-buttons .cta-button.primary,
+.donate-submit-btn,
+.contact-form .submit-button {
+  animation: pulse 2s infinite;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-content,
+.section-title {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Slide In Animation */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* AOS Custom Animations */
+[data-aos="custom-fade-up"] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition-property: transform, opacity;
+}
+
+[data-aos="custom-fade-up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-aos="custom-fade-left"] {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition-property: transform, opacity;
+}
+
+[data-aos="custom-fade-left"].aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+[data-aos="custom-fade-right"] {
+  opacity: 0;
+  transform: translateX(30px);
+  transition-property: transform, opacity;
+}
+
+[data-aos="custom-fade-right"].aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Staggered Animation for Lists */
+.activity-card,
+.event-card,
+.gallery-item,
+.book-card,
+.post-card,
+.faq-item {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.activities-grid .activity-card:nth-child(1) { animation-delay: 0.1s; }
+.activities-grid .activity-card:nth-child(2) { animation-delay: 0.2s; }
+.activities-grid .activity-card:nth-child(3) { animation-delay: 0.3s; }
+.activities-grid .activity-card:nth-child(4) { animation-delay: 0.4s; }
+
+.events-container .event-card:nth-child(1) { animation-delay: 0.1s; }
+.events-container .event-card:nth-child(2) { animation-delay: 0.2s; }
+.events-container .event-card:nth-child(3) { animation-delay: 0.3s; }
+
+.gallery-grid .gallery-item:nth-child(n) { animation-delay: calc(0.1s * var(--i, 1)); }
+.books-grid .book-card:nth-child(n) { animation-delay: calc(0.1s * var(--i, 1)); }
+.posts-grid .post-card:nth-child(n) { animation-delay: calc(0.1s * var(--i, 1)); }
