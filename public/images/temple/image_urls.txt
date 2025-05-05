@@ -1,0 +1,15 @@
+# Temple Image URLs for Hare Krishna Cultural Centre-Guntur
+
+## Temple Architecture
+https://www.iskconbangalore.org/wp-content/uploads/2016/07/iskcon-bangalore-temple.jpg
+
+## Janmashtami Celebration
+https://www.iskconbangalore.org/wp-content/uploads/2016/07/janmashtami.jpg
+
+## Kirtan Performance
+https://www.iskconbangalore.org/wp-content/uploads/2016/07/kirtan.jpg
+
+## Prasadam Distribution
+https://www.iskconbangalore.org/wp-content/uploads/2016/07/prasadam.jpg
+
+# Note: These URLs are from ISKCON Bangalore's website. Please download these images and save them to the public/images/temple folder with appropriate filenames.

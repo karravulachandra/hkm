@@ -1,0 +1,21 @@
+# Deity Image URLs for Hare Krishna Cultural Centre-Guntur
+
+## Lord Krishna
+https://www.iskconbangalore.org/wp-content/uploads/2016/07/krishna-balaram.jpg
+
+## Radha Krishna
+https://www.iskconbangalore.org/wp-content/uploads/2016/07/sri-radha-krishna.jpg
+
+## Lord Venkateshwara
+https://www.iskconbangalore.org/wp-content/uploads/2016/07/srinivasa-govinda.jpg
+
+## Prahalada Narasimha
+https://www.iskconbangalore.org/wp-content/uploads/2016/07/prahlada-narasimha.jpg
+
+## Srila Prabhupada
+https://www.iskconbangalore.org/wp-content/uploads/2021/02/founder-acharya.jpg
+
+## Chaitanya Mahaprabhu
+https://www.iskconbangalore.org/wp-content/uploads/2016/07/sri-chaitanya-mahaprabhu.jpg
+
+# Note: These URLs are from ISKCON Bangalore's website. Please download these images and save them to the public/images/deities folder with appropriate filenames.

@@ -4,47 +4,41 @@ import { useState } from 'react';
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
-  // These will be replaced with actual deity images once downloaded
+  // Deity images from ISKCON sources
   const deityImages = [
     {
       id: 1,
-      placeholder: 'Krishna',
-      color: '#3f51b5',
+      url: '/images/deities/krishna.jpg',
       title: 'Lord Krishna',
       description: 'The Supreme Personality of Godhead'
     },
     {
       id: 2,
-      placeholder: 'Radha',
-      color: '#e91e63',
+      url: '/images/deities/radha_krishna.jpg',
       title: 'Srimati Radharani',
       description: 'The embodiment of divine love and devotion'
     },
     {
       id: 3,
-      placeholder: 'Venkateshwara',
-      color: '#673ab7',
+      url: '/images/deities/venkateshwara.jpg',
       title: 'Lord Venkateshwara',
       description: 'The Lord of Seven Hills'
     },
     {
       id: 4,
-      placeholder: 'Prahalada',
-      color: '#009688',
+      url: '/images/deities/prahalada_narasimha.jpg',
       title: 'Prahalada Maharaja',
       description: 'The great devotee of Lord Narasimha'
     },
     {
       id: 5,
-      placeholder: 'Prabhupada',
-      color: '#ff9800',
+      url: '/images/deities/srila_prabhupada.jpg',
       title: 'Srila Prabhupada',
       description: 'Founder-Acharya of ISKCON'
     },
     {
       id: 6,
-      placeholder: 'Chaitanya Mahaprabhu',
-      color: '#ffc107',
+      url: '/images/deities/chaitanya_mahaprabhu.jpg',
       title: 'Lord Chaitanya Mahaprabhu',
       description: 'The golden avatar of Lord Krishna'
     }
@@ -53,22 +47,19 @@ const Gallery = () => {
   const templeImages = [
     {
       id: 7,
-      placeholder: 'Temple Celebration',
-      color: '#4caf50',
+      url: '/images/temple/janmashtami.jpg',
       title: 'Janmashtami Celebration',
       description: 'Annual celebration of Lord Krishna\'s appearance day'
     },
     {
       id: 8,
-      placeholder: 'Kirtan Performance',
-      color: '#2196f3',
+      url: '/images/temple/kirtan.jpg',
       title: 'Evening Kirtan',
       description: 'Devotees engaged in congregational chanting'
     },
     {
       id: 9,
-      placeholder: 'Prasadam Distribution',
-      color: '#ff5722',
+      url: '/images/temple/prasadam.jpg',
       title: 'Sunday Feast',
       description: 'Weekly feast program with spiritual food distribution'
     }
@@ -94,9 +85,8 @@ const Gallery = () => {
           <div className="gallery-grid">
             {deityImages.map((image) => (
               <div className="gallery-item" key={image.id} onClick={() => openLightbox(image)}>
-                <div className="gallery-image-container" style={{ backgroundColor: image.color }}>
-                  {/* This will be replaced with actual images */}
-                  <div className="placeholder-text">{image.placeholder}</div>
+                <div className="gallery-image-container">
+                  <img src={image.url} alt={image.title} className="gallery-image" />
                 </div>
                 <h3 className="gallery-title">{image.title}</h3>
                 <p className="gallery-description">{image.description}</p>
@@ -110,9 +100,8 @@ const Gallery = () => {
           <div className="gallery-grid">
             {templeImages.map((image) => (
               <div className="gallery-item" key={image.id} onClick={() => openLightbox(image)}>
-                <div className="gallery-image-container" style={{ backgroundColor: image.color }}>
-                  {/* This will be replaced with actual images */}
-                  <div className="placeholder-text">{image.placeholder}</div>
+                <div className="gallery-image-container">
+                  <img src={image.url} alt={image.title} className="gallery-image" />
                 </div>
                 <h3 className="gallery-title">{image.title}</h3>
                 <p className="gallery-description">{image.description}</p>
@@ -126,8 +115,8 @@ const Gallery = () => {
       {selectedImage && (
         <div className="lightbox" onClick={closeLightbox}>
           <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-            <div className="lightbox-image" style={{ backgroundColor: selectedImage.color }}>
-              <div className="placeholder-text">{selectedImage.placeholder}</div>
+            <div className="lightbox-image">
+              <img src={selectedImage.url} alt={selectedImage.title} />
             </div>
             <div className="lightbox-info">
               <h3>{selectedImage.title}</h3>

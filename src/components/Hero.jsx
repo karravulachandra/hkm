@@ -5,27 +5,27 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 const Hero = () => {
   const carouselImages = [
     {
-      url: 'https://www.iskconbangalore.org/wp-content/uploads/2016/07/sri-sri-radha-krishna-1.jpg',
+      url: '/images/deities/radha_krishna.jpg',
       alt: 'Radha Krishna Deities'
     },
     {
-      url: 'https://www.templepurohit.com/wp-content/uploads/2016/04/Lord-Venkateswara-Balaji-Wallpaper-HD-Full-Size-Download.jpg',
+      url: '/images/deities/venkateshwara.jpg',
       alt: 'Lord Venkateshwara'
     },
     {
-      url: 'https://www.iskconbangalore.org/wp-content/uploads/2016/07/iskcon-bangalore-temple.jpg',
+      url: '/images/temple/temple.jpg',
       alt: 'Temple Architecture'
     },
     {
-      url: 'https://www.iskconbangalore.org/wp-content/uploads/2016/07/srila-prabhupada.jpg',
+      url: '/images/deities/srila_prabhupada.jpg',
       alt: 'Srila Prabhupada'
     },
     {
-      url: 'https://www.iskconbangalore.org/wp-content/uploads/2016/07/sri-chaitanya-mahaprabhu.jpg',
+      url: '/images/deities/chaitanya_mahaprabhu.jpg',
       alt: 'Sri Chaitanya Mahaprabhu'
     },
     {
-      url: 'https://www.iskconbangalore.org/wp-content/uploads/2016/07/lord-narasimha.jpg',
+      url: '/images/deities/prahalada_narasimha.jpg',
       alt: 'Lord Narasimha and Prahlada'
     }
   ];
