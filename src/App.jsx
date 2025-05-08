@@ -21,7 +21,7 @@ import './styles/ParallaxAboutSection.css'
 import './styles/AnimatedTimeline.css'
 import './styles/ModernContactForm.css'
 import './styles/InteractiveMap.css'
-import './styles/BookShowcase3D.css'
+// import './styles/BookShowcase3D.css' // Commented out temporarily
 import './styles/ModernHeader.css'
 import './styles/ModernFooter.css'
 import ModernHeader from './components/ModernHeader'

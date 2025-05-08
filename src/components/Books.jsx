@@ -1,3 +1,4 @@
+/*
 import '../styles/Books.css';
 
 const Books = () => {
@@ -57,11 +58,11 @@ const Books = () => {
       <div className="container">
         <h2 className="section-title">Spiritual Literature</h2>
         <p className="section-description">
-          Explore our collection of spiritual books that provide profound insights into Vedic knowledge, 
-          philosophy, and the science of self-realization. These timeless works offer guidance for 
+          Explore our collection of spiritual books that provide profound insights into Vedic knowledge,
+          philosophy, and the science of self-realization. These timeless works offer guidance for
           spiritual growth and understanding.
         </p>
-        
+
         <div className="books-grid">
           {books.map((book) => (
             <div className="book-card" key={book.id}>
@@ -80,7 +81,7 @@ const Books = () => {
             </div>
           ))}
         </div>
-        
+
         <div className="books-cta">
           <p>Visit our center to explore our complete collection of spiritual literature.</p>
           <a href="#contact" className="cta-button primary">Contact Us</a>
@@ -88,6 +89,14 @@ const Books = () => {
       </div>
     </section>
   );
+};
+
+export default Books;
+*/
+
+// Placeholder component for Books (commented out for now)
+const Books = () => {
+  return null;
 };
 
 export default Books;

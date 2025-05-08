@@ -208,7 +208,7 @@
   font-weight: 600;
 }
 
-/* Books Page Styles */
+/* Books Page Styles - Commented out temporarily
 .importance-content {
   max-width: 800px;
   margin: 0 auto;
@@ -290,6 +290,7 @@
   color: var(--text-color);
   line-height: 1.6;
 }
+*/
 
 /* Donate Page Styles */
 .support-content {

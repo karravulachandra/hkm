@@ -154,11 +154,11 @@
     width: 100% !important;
   }
 
-  /* Books */
+  /* Books - Commented out temporarily
   .books-grid {
     grid-template-columns: 1fr !important;
     gap: 1.5rem !important;
-  }
+  } */
 
   .book-cover {
     height: 180px !important;
@@ -305,11 +305,11 @@
     width: 100% !important;
   }
 
-  /* Books */
+  /* Books - Commented out temporarily
   .books-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 1.5rem !important;
-  }
+  } */
 
   /* Donate */
   .donate-content {
@@ -381,11 +381,11 @@
     gap: 1.5rem !important;
   }
 
-  /* Books */
+  /* Books - Commented out temporarily
   .books-grid {
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 1.5rem !important;
-  }
+  } */
 
   /* Donate */
   .donate-content {
@@ -425,10 +425,10 @@
     grid-template-columns: repeat(4, 1fr) !important;
   }
 
-  /* Books */
+  /* Books - Commented out temporarily
   .books-grid {
     grid-template-columns: repeat(3, 1fr) !important;
-  }
+  } */
 
   /* Page Banner */
   .page-banner {
