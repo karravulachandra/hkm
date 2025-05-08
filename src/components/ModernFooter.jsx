@@ -1,12 +1,14 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
+import { ThemeContext } from '../context/ThemeContext';
 import '../styles/ModernFooter.css';
 
 const ModernFooter = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { theme } = useContext(ThemeContext);
 
   const footerRef = useRef(null);
   const isInView = useInView(footerRef, { once: true, amount: 0.2 });
@@ -59,7 +61,7 @@ const ModernFooter = () => {
   };
 
   return (
-    <footer className="modern-footer" ref={footerRef}>
+    <footer className={`modern-footer ${theme}`} ref={footerRef}>
       <div className="footer-decoration top"></div>
 
       <motion.div

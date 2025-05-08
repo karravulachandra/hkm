@@ -24,8 +24,12 @@ import './styles/InteractiveMap.css'
 // import './styles/BookShowcase3D.css' // Commented out temporarily
 import './styles/ModernHeader.css'
 import './styles/ModernFooter.css'
+import './styles/Theme.css'
+import './styles/ThemeToggle.css'
+import { ThemeProvider } from './context/ThemeContext'
 import ModernHeader from './components/ModernHeader'
 import ModernFooter from './components/ModernFooter'
+import ThemeToggle from './components/ThemeToggle'
 
 // Import page components
 import HomePage from './pages/HomePage'
@@ -49,23 +53,26 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <ModernHeader />
-      <AnimatePresence mode="wait">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/activities" element={<ActivitiesPage />} />
-          <Route path="/events" element={<EventsPage />} />
-          <Route path="/gallery" element={<GalleryPage />} />
-          {/* <Route path="/books" element={<BooksPage />} /> */}
+    <ThemeProvider>
+      <Router>
+        <ModernHeader />
+        <ThemeToggle />
+        <AnimatePresence mode="wait">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/activities" element={<ActivitiesPage />} />
+            <Route path="/events" element={<EventsPage />} />
+            <Route path="/gallery" element={<GalleryPage />} />
+            {/* <Route path="/books" element={<BooksPage />} /> */}
 
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </AnimatePresence>
-      <ModernFooter />
-    </Router>
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </AnimatePresence>
+        <ModernFooter />
+      </Router>
+    </ThemeProvider>
   )
 }
 

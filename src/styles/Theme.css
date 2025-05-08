@@ -1,0 +1,92 @@
+/* Light Theme (Default) */
+:root, body.light {
+  --primary-color: #FF7F00;
+  --secondary-color: #FFD700;
+  --temple-maroon: #800000;
+  --dark-color: #333333;
+  --text-color: #555555;
+  --light-color: #F8F8F8;
+  --bg-color: #FFFFFF;
+  --card-bg: #FFFFFF;
+  --border-color: #EEEEEE;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --header-bg: #FFFFFF;
+  --footer-bg: #F8F8F8;
+  --input-bg: #FFFFFF;
+  --input-border: #EEEEEE;
+  --input-text: #333333;
+  --button-hover: #E67300;
+  --divider-color: #EEEEEE;
+  --quote-bg: #f8f4e6;
+}
+
+/* Dark Theme */
+body.dark {
+  --primary-color: #FF9933;
+  --secondary-color: #FFD700;
+  --temple-maroon: #B22222;
+  --dark-color: #F8F8F8;
+  --text-color: #DDDDDD;
+  --light-color: #2D3748;
+  --bg-color: #1A202C;
+  --card-bg: #2D3748;
+  --border-color: #4A5568;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --header-bg: #2D3748;
+  --footer-bg: #2D3748;
+  --input-bg: #4A5568;
+  --input-border: #4A5568;
+  --input-text: #FFFFFF;
+  --button-hover: #FF8C1A;
+  --divider-color: #4A5568;
+  --quote-bg: #3D4A5C;
+}
+
+/* Apply theme transitions */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Update existing components with theme variables */
+.header, .modern-header {
+  background-color: var(--header-bg);
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.footer, .modern-footer {
+  background-color: var(--footer-bg);
+}
+
+.card, .activity-card, .event-card, .gallery-card, .contact-card {
+  background-color: var(--card-bg);
+  box-shadow: 0 10px 20px var(--shadow-color);
+}
+
+input, textarea, select {
+  background-color: var(--input-bg);
+  border-color: var(--input-border);
+  color: var(--input-text);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--dark-color);
+}
+
+a {
+  color: var(--primary-color);
+}
+
+.divider {
+  background-color: var(--divider-color);
+}

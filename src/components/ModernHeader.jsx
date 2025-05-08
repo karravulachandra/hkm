@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ThemeContext } from '../context/ThemeContext';
 import '../styles/ModernHeader.css';
 
 const ModernHeader = () => {
@@ -8,6 +9,7 @@ const ModernHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const location = useLocation();
+  const { theme } = useContext(ThemeContext);
 
   // Handle scroll event to change header style
   useEffect(() => {
@@ -195,7 +197,7 @@ const ModernHeader = () => {
 
   return (
     <motion.header
-      className={`modern-header ${isScrolled ? 'scrolled' : ''}`}
+      className={`modern-header ${isScrolled ? 'scrolled' : ''} ${theme}`}
       variants={headerVariants}
       initial="visible"
       animate="visible"
