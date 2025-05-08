@@ -14,7 +14,7 @@ const ModernPageBanner = ({ title, subtitle, backgroundImage, decorativeElements
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   // Default background image if none provided
-  const defaultBg = '/src/assets/images/food-distribution.png';
+  const defaultBg = './assets/images/food-distribution.png';
 
   return (
     <div className="modern-page-banner" ref={bannerRef}>

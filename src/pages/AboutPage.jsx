@@ -24,7 +24,7 @@ const AboutPage = () => {
       <ModernPageBanner
         title="About Our Centre"
         subtitle="Discover the spiritual sanctuary of Hare Krishna Cultural Centre in Guntur"
-        backgroundImage="/src/assets/images/temple.jpg"
+        backgroundImage="./assets/images/temple.jpg"
       />
 
       <div className="container section-padding">
@@ -108,7 +108,7 @@ const AboutPage = () => {
                 }}
               >
                 <div className="guru-image">
-                  <img src="/src/assets/images/last-day-of-srilaprabhupada.jpg" alt="Srila Prabhupada" />
+                  <img src="./assets/images/last-day-of-srilaprabhupada.jpg" alt="Srila Prabhupada" />
                 </div>
                 <div className="guru-info">
                   <h3>Srila Prabhupada</h3>
@@ -128,7 +128,7 @@ const AboutPage = () => {
                 }}
               >
                 <div className="guru-image">
-                  <img src="/src/assets/images/Chaitanya-Mahaprabhu.jpg" alt="Lord Chaitanya" />
+                  <img src="./assets/images/Chaitanya-Mahaprabhu.jpg" alt="Lord Chaitanya" />
                 </div>
                 <div className="guru-info">
                   <h3>Lord Chaitanya</h3>
@@ -148,7 +148,7 @@ const AboutPage = () => {
                 }}
               >
                 <div className="guru-image">
-                  <img src="/src/assets/images/krishnaflute.webp" alt="Lord Krishna" />
+                  <img src="./assets/images/krishnaflute.webp" alt="Lord Krishna" />
                 </div>
                 <div className="guru-info">
                   <h3>Lord Krishna</h3>
@@ -172,7 +172,7 @@ const AboutPage = () => {
                 }}
               >
                 <div className="lineage-image">
-                  <img src="/src/assets/images/temple.jpg" alt="Temple" />
+                  <img src="./assets/images/temple.jpg" alt="Temple" />
                 </div>
                 <div className="lineage-caption">
                   <p>Our Temple</p>
@@ -191,7 +191,7 @@ const AboutPage = () => {
                 }}
               >
                 <div className="lineage-image">
-                  <img src="/src/assets/images/first-Iskcon-temple.jpg" alt="First ISKCON Temple" />
+                  <img src="./assets/images/first-Iskcon-temple.jpg" alt="First ISKCON Temple" />
                 </div>
                 <div className="lineage-caption">
                   <p>First ISKCON Temple</p>
@@ -210,7 +210,7 @@ const AboutPage = () => {
                 }}
               >
                 <div className="lineage-image">
-                  <img src="/src/assets/images/last-day-of-srilaprabhupada.jpg" alt="Last Days of Srila Prabhupada" />
+                  <img src="./assets/images/last-day-of-srilaprabhupada.jpg" alt="Last Days of Srila Prabhupada" />
                 </div>
                 <div className="lineage-caption">
                   <p>Last Days of Srila Prabhupada</p>
@@ -229,7 +229,7 @@ const AboutPage = () => {
                 }}
               >
                 <div className="lineage-image">
-                  <img src="/src/assets/images/guntur-temple.jpg" alt="Guntur Temple" />
+                  <img src="./assets/images/guntur-temple.jpg" alt="Guntur Temple" />
                 </div>
                 <div className="lineage-caption">
                   <p>Guntur Temple</p>
@@ -248,7 +248,7 @@ const AboutPage = () => {
                 }}
               >
                 <div className="lineage-image">
-                  <img src="/src/assets/images/food-distribution.png" alt="Food Distribution" />
+                  <img src="./assets/images/food-distribution.png" alt="Food Distribution" />
                 </div>
                 <div className="lineage-caption">
                   <p>Food Distribution</p>
