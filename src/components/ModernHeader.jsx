@@ -82,7 +82,6 @@ const ModernHeader = () => {
     { name: 'Events', path: '/events' },
     { name: 'Gallery', path: '/gallery' },
     { name: 'Books', path: '/books' },
-    { name: 'Donate', path: '/donate' },
     { name: 'Contact', path: '/contact' }
   ];
 
@@ -210,7 +209,7 @@ const ModernHeader = () => {
             whileTap={{ scale: 0.95 }}
           >
             <img
-              src="/src/assets/images/logo.png"
+              src="/assets/images/logo.png"
               alt="Hare Krishna Cultural Centre Temple"
             />
           </motion.div>

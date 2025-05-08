@@ -21,7 +21,7 @@ const EventsPage = () => {
       <ModernPageBanner
         title="Divine Events"
         subtitle="Join us for spiritual celebrations and gatherings throughout the year"
-        backgroundImage="/src/assets/images/gauripaurnima.jpg"
+        backgroundImage="./assets/images/gauripaurnima.jpg"
       />
 
       <div className="container section-padding">
@@ -76,37 +76,37 @@ const EventsPage = () => {
                 name: "Gaura Purnima",
                 description: "Appearance day of Lord Chaitanya Mahaprabhu",
                 date: "March (varies yearly)",
-                image: "/src/assets/images/deities/Chaitanya-Mahaprabhu.jpg"
+                image: "./assets/images/deities/Chaitanya-Mahaprabhu.jpg"
               },
               {
                 name: "Ram Navami",
                 description: "Appearance day of Lord Ramachandra",
                 date: "April (varies yearly)",
-                image: "/src/assets/images/rama-navami.jpg"
+                image: "./assets/images/rama-navami.jpg"
               },
               {
                 name: "Narasimha Chaturdashi",
                 description: "Appearance day of Lord Narasimhadeva",
                 date: "May (varies yearly)",
-                image: "/src/assets/images/deities/prahalada.jpg"
+                image: "./assets/images/deities/prahalada.jpg"
               },
               {
                 name: "Ratha Yatra",
                 description: "The chariot festival of Lord Jagannath",
                 date: "July (varies yearly)",
-                image: "/src/assets/images/deities/puri-jagannath.jpg"
+                image: "./assets/images/deities/puri-jagannath.jpg"
               },
               {
                 name: "Janmashtami",
                 description: "Appearance day of Lord Krishna",
                 date: "August/September (varies yearly)",
-                image: "/src/assets/images/deities/krishnaflute.webp"
+                image: "./assets/images/deities/krishnaflute.webp"
               },
               {
                 name: "Radhastami",
                 description: "Appearance day of Srimati Radharani",
                 date: "September (varies yearly)",
-                image: "/src/assets/images/deities/radhadevi.jpg"
+                image: "./assets/images/deities/radhadevi.jpg"
               }
             ].map((festival, index) => (
               <motion.div

@@ -40,9 +40,9 @@
 }
 
 .logo-image {
-  width: 50px;
+  width: 80px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 4px;
   overflow: hidden;
   margin-right: 1rem;
   border: 2px solid var(--primary-color);
@@ -252,25 +252,25 @@
   .desktop-nav {
     display: none;
   }
-  
+
   .mobile-menu-button {
     display: flex;
   }
-  
+
   .mobile-nav {
     display: block;
   }
-  
+
   .logo-text h1 {
     font-size: 1.1rem;
   }
-  
+
   .logo-text p {
     font-size: 0.8rem;
   }
-  
+
   .logo-image {
-    width: 40px;
+    width: 70px;
     height: 40px;
   }
 }
@@ -279,21 +279,21 @@
   .logo-text h1 {
     font-size: 0.9rem;
   }
-  
+
   .logo-text p {
     display: none;
   }
-  
+
   .logo-image {
-    width: 35px;
+    width: 60px;
     height: 35px;
     margin-right: 0.5rem;
   }
-  
+
   .modern-header {
     padding: 0.8rem 0;
   }
-  
+
   .modern-header.scrolled {
     padding: 0.5rem 0;
   }

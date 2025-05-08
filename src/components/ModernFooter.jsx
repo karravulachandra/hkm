@@ -72,7 +72,7 @@ const ModernFooter = () => {
           <motion.div className="footer-logo" variants={itemVariants}>
             <div className="logo-image">
               <img
-                src="/src/assets/images/logo.png"
+                src="/assets/images/logo.png"
                 alt="Hare Krishna Cultural Centre"
               />
             </div>
@@ -135,7 +135,6 @@ const ModernFooter = () => {
               <div className="links-column">
                 <Link to="/gallery" className="footer-link">Gallery</Link>
                 <Link to="/books" className="footer-link">Books</Link>
-                <Link to="/donate" className="footer-link">Donate</Link>
                 <Link to="/contact" className="footer-link">Contact</Link>
               </div>
             </div>

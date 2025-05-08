@@ -14,37 +14,37 @@ const deities = [
   {
     id: 1,
     name: 'Lord Krishna',
-    image: '/src/assets/images/deities/krishnaflute.webp',
+    image: './assets/images/deities/krishnaflute.webp',
     description: 'The Supreme Personality of Godhead, known for His enchanting form with a peacock feather and divine flute.'
   },
   {
     id: 2,
     name: 'Radha Krishna',
-    image: '/src/assets/images/deities/krishnaradha.jpg',
+    image: './assets/images/deities/krishnaradha.jpg',
     description: 'The divine couple representing the perfect union of the supreme masculine and feminine energies.'
   },
   {
     id: 3,
     name: 'Lord Venkateshwara',
-    image: '/src/assets/images/deities/nitay.jpg', // Using nitay.jpg as a placeholder for Venkateshwara
+    image: './assets/images/deities/nitay.jpg', // Using nitay.jpg as a placeholder for Venkateshwara
     description: 'An incarnation of Lord Vishnu, highly revered in South India, especially in Tirupati.'
   },
   {
     id: 4,
     name: 'Lord Chaitanya Mahaprabhu',
-    image: '/src/assets/images/deities/Chaitanya-Mahaprabhu.jpg',
+    image: './assets/images/deities/Chaitanya-Mahaprabhu.jpg',
     description: 'The golden avatar of Lord Krishna who appeared in Bengal to spread the chanting of the holy names.'
   },
   {
     id: 5,
     name: 'Srila Prabhupada',
-    image: '/src/assets/images/deities/srilaprabhupada.jpg',
+    image: './assets/images/deities/srilaprabhupada.jpg',
     description: 'The founder-acharya of ISKCON who brought Krishna Consciousness to the Western world.'
   },
   {
     id: 6,
     name: 'Prahlada Maharaja',
-    image: '/src/assets/images/deities/prahalada.jpg',
+    image: './assets/images/deities/prahalada.jpg',
     description: 'The great devotee of Lord Vishnu who demonstrated unwavering faith despite persecution by his father Hiranyakashipu.'
   }
 ];

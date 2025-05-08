@@ -22,7 +22,6 @@ import './styles/AnimatedTimeline.css'
 import './styles/ModernContactForm.css'
 import './styles/InteractiveMap.css'
 import './styles/BookShowcase3D.css'
-import './styles/DonationProgress.css'
 import './styles/ModernHeader.css'
 import './styles/ModernFooter.css'
 import ModernHeader from './components/ModernHeader'
@@ -35,7 +34,7 @@ import ActivitiesPage from './pages/ActivitiesPage'
 import EventsPage from './pages/EventsPage'
 import GalleryPage from './pages/GalleryPage'
 import BooksPage from './pages/BooksPage'
-import DonatePage from './pages/DonatePage'
+
 import ContactPage from './pages/ContactPage'
 import NotFoundPage from './pages/NotFoundPage'
 
@@ -60,7 +59,7 @@ function App() {
           <Route path="/events" element={<EventsPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/books" element={<BooksPage />} />
-          <Route path="/donate" element={<DonatePage />} />
+
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

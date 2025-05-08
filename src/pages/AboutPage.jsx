@@ -24,7 +24,7 @@ const AboutPage = () => {
       <ModernPageBanner
         title="About Our Centre"
         subtitle="Discover the spiritual sanctuary of Hare Krishna Cultural Centre in Guntur"
-        backgroundImage="./assets/images/temple.jpg"
+        backgroundImage="/assets/images/temple.jpg"
       />
 
       <div className="container section-padding">
@@ -108,7 +108,7 @@ const AboutPage = () => {
                 }}
               >
                 <div className="guru-image">
-                  <img src="./assets/images/last-day-of-srilaprabhupada.jpg" alt="Srila Prabhupada" />
+                  <img src="/assets/images/last-day-of-srilaprabhupada.jpg" alt="Srila Prabhupada" />
                 </div>
                 <div className="guru-info">
                   <h3>Srila Prabhupada</h3>
@@ -128,7 +128,7 @@ const AboutPage = () => {
                 }}
               >
                 <div className="guru-image">
-                  <img src="./assets/images/Chaitanya-Mahaprabhu.jpg" alt="Lord Chaitanya" />
+                  <img src="/assets/images/Chaitanya-Mahaprabhu.jpg" alt="Lord Chaitanya" />
                 </div>
                 <div className="guru-info">
                   <h3>Lord Chaitanya</h3>

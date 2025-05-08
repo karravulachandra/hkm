@@ -6,73 +6,73 @@ import '../styles/ModernGallery.css';
 const galleryImages = [
   {
     id: 1,
-    src: '/src/assets/images/deities/krishnaflute.webp',
+    src: './assets/images/deities/krishnaflute.webp',
     alt: 'Lord Krishna',
     category: 'deity'
   },
   {
     id: 2,
-    src: '/src/assets/images/deities/krishnaradha.jpg',
+    src: './assets/images/deities/krishnaradha.jpg',
     alt: 'Radha Krishna',
     category: 'deity'
   },
   {
     id: 3,
-    src: '/src/assets/images/deities/nitay.jpg',
+    src: './assets/images/deities/nitay.jpg',
     alt: 'Lord Venkateshwara',
     category: 'deity'
   },
   {
     id: 4,
-    src: '/src/assets/images/deities/Chaitanya-Mahaprabhu.jpg',
+    src: './assets/images/deities/Chaitanya-Mahaprabhu.jpg',
     alt: 'Lord Chaitanya Mahaprabhu',
     category: 'deity'
   },
   {
     id: 5,
-    src: '/src/assets/images/deities/srilaprabhupada.jpg',
+    src: './assets/images/deities/srilaprabhupada.jpg',
     alt: 'Srila Prabhupada',
     category: 'guru'
   },
   {
     id: 6,
-    src: '/src/assets/images/deities/prahalada.jpg',
+    src: './assets/images/deities/prahalada.jpg',
     alt: 'Prahlada Maharaja',
     category: 'deity'
   },
   {
     id: 7,
-    src: '/src/assets/images/food-distribution.png',
+    src: './assets/images/food-distribution.png',
     alt: 'Hare Krishna Cultural Centre',
     category: 'temple'
   },
   {
     id: 8,
-    src: '/src/assets/images/puri-jagannath.jpg',
+    src: './assets/images/puri-jagannath.jpg',
     alt: 'Kirtan Session',
     category: 'event'
   },
   {
     id: 9,
-    src: '/src/assets/images/food-distribution.png',
+    src: './assets/images/food-distribution.png',
     alt: 'Prasadam Distribution',
     category: 'event'
   },
   {
     id: 10,
-    src: '/src/assets/images/puri-temple.jpg',
+    src: './assets/images/puri-temple.jpg',
     alt: 'Temple Architecture',
     category: 'temple'
   },
   {
     id: 11,
-    src: '/src/assets/images/radhadevi.jpg',
+    src: './assets/images/radhadevi.jpg',
     alt: 'Devotees Chanting',
     category: 'event'
   },
   {
     id: 12,
-    src: '/src/assets/images/logo.png',
+    src: './assets/images/logo.png',
     alt: 'Hare Krishna Cultural Centre Logo',
     category: 'temple'
   }
