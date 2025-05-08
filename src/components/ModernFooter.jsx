@@ -134,7 +134,7 @@ const ModernFooter = () => {
               </div>
               <div className="links-column">
                 <Link to="/gallery" className="footer-link">Gallery</Link>
-                <Link to="/books" className="footer-link">Books</Link>
+                {/* <Link to="/books" className="footer-link">Books</Link> */}
                 <Link to="/contact" className="footer-link">Contact</Link>
               </div>
             </div>

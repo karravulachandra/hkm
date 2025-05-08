@@ -1,3 +1,4 @@
+/*
 import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import '../styles/BookShowcase3D.css';
@@ -269,6 +270,14 @@ const BookShowcase3D = () => {
       )}
     </div>
   );
+};
+
+export default BookShowcase3D;
+*/
+
+// Placeholder component for BookShowcase3D (commented out for now)
+const BookShowcase3D = () => {
+  return null;
 };
 
 export default BookShowcase3D;

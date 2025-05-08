@@ -33,7 +33,7 @@ import AboutPage from './pages/AboutPage'
 import ActivitiesPage from './pages/ActivitiesPage'
 import EventsPage from './pages/EventsPage'
 import GalleryPage from './pages/GalleryPage'
-import BooksPage from './pages/BooksPage'
+// import BooksPage from './pages/BooksPage' // Commented out temporarily
 
 import ContactPage from './pages/ContactPage'
 import NotFoundPage from './pages/NotFoundPage'
@@ -58,7 +58,7 @@ function App() {
           <Route path="/activities" element={<ActivitiesPage />} />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
-          <Route path="/books" element={<BooksPage />} />
+          {/* <Route path="/books" element={<BooksPage />} /> */}
 
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<NotFoundPage />} />

@@ -81,7 +81,7 @@ const ModernHeader = () => {
     },
     { name: 'Events', path: '/events' },
     { name: 'Gallery', path: '/gallery' },
-    { name: 'Books', path: '/books' },
+    // { name: 'Books', path: '/books' }, // Commented out temporarily
     { name: 'Contact', path: '/contact' }
   ];
 

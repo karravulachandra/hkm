@@ -1,3 +1,4 @@
+/*
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ModernPageBanner from '../components/ModernPageBanner';
@@ -21,7 +22,7 @@ const BooksPage = () => {
       <ModernPageBanner
         title="Sacred Literature"
         subtitle="Explore the timeless wisdom of Vedic knowledge through our collection of books"
-        backgroundImage="/src/assets/images/puri-temple.jpg"
+        backgroundImage="/assets/images/puri-temple.jpg"
       />
 
       <div className="container section-padding">
@@ -164,6 +165,14 @@ const BooksPage = () => {
       </div>
     </motion.main>
   );
+};
+
+export default BooksPage;
+*/
+
+// Placeholder component for BooksPage (commented out for now)
+const BooksPage = () => {
+  return null;
 };
 
 export default BooksPage;
