@@ -176,18 +176,29 @@
 @media (max-width: 992px) {
   .footer-content {
     flex-wrap: wrap;
+    gap: 3rem;
   }
 
   .footer-logo, .footer-links, .footer-social {
     flex: 0 0 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-links ul {
+    columns: 2;
+    column-gap: 2rem;
   }
 }
 
 @media (max-width: 768px) {
+  .footer {
+    padding: 3rem 0 1.5rem;
+  }
+
   .footer-content {
     flex-direction: column;
     text-align: center;
+    gap: 2.5rem;
   }
 
   .footer-links h4::after,
@@ -197,7 +208,10 @@
   }
 
   .footer-links ul {
-    columns: 1;
+    columns: 2;
+    column-gap: 2rem;
+    max-width: 400px;
+    margin: 0 auto;
   }
 
   .footer-links a {
@@ -210,10 +224,58 @@
 
   .social-icons {
     justify-content: center;
+    gap: 1.5rem;
   }
 
   .subscribe-form {
     max-width: 300px;
     margin: 1rem auto;
+  }
+
+  .footer-bottom {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding: 2.5rem 0 1rem;
+  }
+
+  .footer-content {
+    gap: 2rem;
+  }
+
+  .footer-links ul {
+    columns: 1;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.8rem;
+  }
+
+  .footer-logo h3 {
+    font-size: 1.3rem;
+  }
+
+  .footer-links h4,
+  .footer-social h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .subscribe-form input,
+  .subscribe-form button {
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  .footer-bottom p {
+    font-size: 0.8rem;
   }
 }

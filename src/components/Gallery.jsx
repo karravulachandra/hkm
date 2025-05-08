@@ -4,41 +4,41 @@ import { useState } from 'react';
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
-  // Deity images from ISKCON sources
+  // Deity images from local assets
   const deityImages = [
     {
       id: 1,
-      url: '/images/deities/krishna.jpg',
+      url: '/src/assets/images/deities/krishnaflute.webp',
       title: 'Lord Krishna',
       description: 'The Supreme Personality of Godhead'
     },
     {
       id: 2,
-      url: '/images/deities/radha_krishna.jpg',
+      url: '/src/assets/images/deities/krishnaradha.jpg',
       title: 'Srimati Radharani',
       description: 'The embodiment of divine love and devotion'
     },
     {
       id: 3,
-      url: '/images/deities/venkateshwara.jpg',
+      url: '/src/assets/images/deities/nitay.jpg',
       title: 'Lord Venkateshwara',
       description: 'The Lord of Seven Hills'
     },
     {
       id: 4,
-      url: '/images/deities/prahalada_narasimha.jpg',
+      url: '/src/assets/images/deities/prahalada.jpg',
       title: 'Prahalada Maharaja',
       description: 'The great devotee of Lord Narasimha'
     },
     {
       id: 5,
-      url: '/images/deities/srila_prabhupada.jpg',
+      url: '/src/assets/images/deities/srilaprabhupada.jpg',
       title: 'Srila Prabhupada',
       description: 'Founder-Acharya of ISKCON'
     },
     {
       id: 6,
-      url: '/images/deities/chaitanya_mahaprabhu.jpg',
+      url: '/src/assets/images/deities/Chaitanya-Mahaprabhu.jpg',
       title: 'Lord Chaitanya Mahaprabhu',
       description: 'The golden avatar of Lord Krishna'
     }
@@ -47,19 +47,19 @@ const Gallery = () => {
   const templeImages = [
     {
       id: 7,
-      url: '/images/temple/janmashtami.jpg',
+      url: '/src/assets/images/radhadevi.jpg',
       title: 'Janmashtami Celebration',
       description: 'Annual celebration of Lord Krishna\'s appearance day'
     },
     {
       id: 8,
-      url: '/images/temple/kirtan.jpg',
+      url: '/src/assets/images/puri-jagannath.jpg',
       title: 'Evening Kirtan',
       description: 'Devotees engaged in congregational chanting'
     },
     {
       id: 9,
-      url: '/images/temple/prasadam.jpg',
+      url: '/src/assets/images/food-distribution.png',
       title: 'Sunday Feast',
       description: 'Weekly feast program with spiritual food distribution'
     }

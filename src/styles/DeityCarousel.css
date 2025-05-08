@@ -1,0 +1,287 @@
+.deity-carousel-section {
+  padding: 5rem 0;
+  background-color: #f8f4e6;
+  position: relative;
+  overflow: hidden;
+}
+
+.deity-carousel-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.transparenttextures.com/patterns/temple.png');
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.deity-carousel-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.deity-swiper {
+  width: 100%;
+  padding: 3rem 0;
+}
+
+.deity-slide {
+  width: 300px;
+  height: 450px;
+  transition: transform 0.3s ease;
+}
+
+.deity-card {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #fff9e6, #fff);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  border: 1px solid rgba(205, 127, 50, 0.2);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.deity-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color), var(--primary-color));
+}
+
+.deity-image-container {
+  height: 65%;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(to bottom, #1A237E, #0D47A1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deity-image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 215, 0, 0.3), rgba(0, 0, 0, 0.5));
+  opacity: 0;
+  z-index: 3;
+  transition: opacity 0.5s ease;
+}
+
+.deity-card:hover .deity-image-container::before {
+  opacity: 1;
+}
+
+.deity-image {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+  z-index: 2;
+}
+
+.deity-card:hover .deity-image {
+  transform: scale(1.1) translateY(-5px);
+}
+
+.deity-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.4) 0%, rgba(255, 215, 0, 0) 70%);
+  border-radius: 50%;
+  z-index: 1;
+  animation: pulse 3s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+.deity-info {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #fff;
+}
+
+.deity-name {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-family: 'Tiro Devanagari Sanskrit', serif;
+  position: relative;
+  display: inline-block;
+  margin: 0 auto 0.8rem;
+}
+
+.deity-name::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--secondary-color), transparent);
+}
+
+.deity-description {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Swiper customization */
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary-color);
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: var(--primary-color);
+}
+
+.swiper-slide-active .deity-card {
+  transform: translateY(-20px) rotateX(5deg);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 215, 0, 0.4);
+}
+
+.swiper-slide-active .deity-image {
+  transform: scale(1.1) translateY(-5px);
+}
+
+.swiper-slide-active .deity-image-container::before {
+  opacity: 0.7;
+}
+
+/* Autoplay progress (subtle) */
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: transparent; /* Hide the text */
+  opacity: 0.6;
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 2px; /* Thinner stroke */
+  stroke: var(--primary-color);
+  fill: none;
+  stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+}
+
+/* Decorative elements */
+.carousel-decoration {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.carousel-decoration.left {
+  left: -50px;
+  top: 50px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='none' stroke='%23FF7F00' stroke-width='2'/%3E%3Cpath fill='%23FF7F00' d='M50 5 L53 20 L60 10 L58 25 L70 18 L62 30 L75 28 L65 38 L80 40 L65 45 L80 50 L65 55 L80 60 L65 62 L75 72 L62 70 L70 82 L58 75 L60 90 L53 80 L50 95 L47 80 L40 90 L42 75 L30 82 L38 70 L25 72 L35 62 L20 60 L35 55 L20 50 L35 45 L20 40 L35 38 L25 28 L38 30 L30 18 L42 25 L40 10 L47 20 Z'/%3E%3C/svg%3E");
+}
+
+.carousel-decoration.right {
+  right: -50px;
+  bottom: 50px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23FF7F00' d='M50 0 C60 30 90 40 90 60 C90 80 70 100 50 100 C30 100 10 80 10 60 C10 40 40 30 50 0'/%3E%3C/svg%3E");
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .deity-carousel-section {
+    padding: 3rem 0;
+  }
+
+  .deity-slide {
+    width: 250px;
+    height: 400px;
+  }
+
+  .deity-name {
+    font-size: 1.3rem;
+  }
+
+  .deity-description {
+    font-size: 0.8rem;
+  }
+
+  .carousel-decoration {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .deity-slide {
+    width: 220px;
+    height: 350px;
+  }
+
+  .deity-info {
+    padding: 1rem;
+  }
+
+  .deity-name {
+    font-size: 1.2rem;
+  }
+
+  .carousel-decoration {
+    display: none;
+  }
+}

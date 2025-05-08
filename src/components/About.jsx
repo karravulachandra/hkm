@@ -71,7 +71,7 @@ const About = () => {
           </div>
           <div className="about-image">
             <div className="image-frame">
-              <img src="https://www.iskconbangalore.org/wp-content/uploads/2016/07/iskcon-bangalore-temple-entrance.jpg" alt="Krishna Temple Entrance" />
+              <img src="/src/assets/images/guntur-temple.jpg" alt="Krishna Temple Entrance" />
             </div>
           </div>
         </div>

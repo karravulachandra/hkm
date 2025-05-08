@@ -31,7 +31,11 @@ body {
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--light-color);
-  background-image: url('https://www.transparenttextures.com/patterns/temple.png');
+  background-image: url('/src/assets/images/radhadevi.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-blend-mode: overlay;
   min-width: 320px;
   position: relative;
 }
@@ -81,6 +85,50 @@ button {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Responsive image handling */
+.responsive-img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.responsive-img.contain {
+  object-fit: contain;
+}
+
+.responsive-img.cover {
+  object-fit: cover;
+}
+
+/* Lazy loading placeholder */
+.img-placeholder {
+  background-color: #f0f0f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 150%;
+  }
 }
 
 /* Utility Classes */
@@ -89,6 +137,83 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+/* Responsive utility classes */
+.hide-xs {
+  display: none !important;
+}
+
+@media (min-width: 576px) {
+  .hide-xs {
+    display: initial !important;
+  }
+
+  .hide-sm {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .hide-sm {
+    display: initial !important;
+  }
+
+  .hide-md {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .hide-md {
+    display: initial !important;
+  }
+
+  .hide-lg {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hide-lg {
+    display: initial !important;
+  }
+}
+
+/* Responsive flex utilities */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-column-xs {
+  flex-direction: column;
+}
+
+@media (min-width: 576px) {
+  .flex-column-xs {
+    flex-direction: row;
+  }
+
+  .flex-column-sm {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) {
+  .flex-column-sm {
+    flex-direction: row;
+  }
+
+  .flex-column-md {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 992px) {
+  .flex-column-md {
+    flex-direction: row;
+  }
 }
 
 .section-title {

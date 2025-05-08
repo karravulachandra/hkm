@@ -1,13 +1,32 @@
 import { useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import 'swiper/css'
+import 'swiper/css/effect-coverflow'
+import 'swiper/css/pagination'
 import './App.css'
 import './styles/Responsive.css'
 import './styles/Animations.css'
 import './styles/Pages.css'
-import Header from './components/Header'
-import Footer from './components/Footer'
+import './styles/ModernHero.css'
+import './styles/DeityCarousel.css'
+import './styles/DevotionalQuote.css'
+import './styles/ActivitiesShowcase.css'
+import './styles/ModernGallery.css'
+import './styles/ModernPageBanner.css'
+import './styles/ModernEventsCalendar.css'
+import './styles/ParallaxAboutSection.css'
+import './styles/AnimatedTimeline.css'
+import './styles/ModernContactForm.css'
+import './styles/InteractiveMap.css'
+import './styles/BookShowcase3D.css'
+import './styles/DonationProgress.css'
+import './styles/ModernHeader.css'
+import './styles/ModernFooter.css'
+import ModernHeader from './components/ModernHeader'
+import ModernFooter from './components/ModernFooter'
 
 // Import page components
 import HomePage from './pages/HomePage'
@@ -32,19 +51,21 @@ function App() {
 
   return (
     <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/activities" element={<ActivitiesPage />} />
-        <Route path="/events" element={<EventsPage />} />
-        <Route path="/gallery" element={<GalleryPage />} />
-        <Route path="/books" element={<BooksPage />} />
-        <Route path="/donate" element={<DonatePage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-      <Footer />
+      <ModernHeader />
+      <AnimatePresence mode="wait">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/activities" element={<ActivitiesPage />} />
+          <Route path="/events" element={<EventsPage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/books" element={<BooksPage />} />
+          <Route path="/donate" element={<DonatePage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </AnimatePresence>
+      <ModernFooter />
     </Router>
   )
 }

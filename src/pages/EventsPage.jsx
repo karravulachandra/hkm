@@ -1,90 +1,140 @@
 import { useEffect } from 'react';
-import AOS from 'aos';
-import Events from '../components/Events';
+import { motion } from 'framer-motion';
+import ModernPageBanner from '../components/ModernPageBanner';
+import ModernEventsCalendar from '../components/ModernEventsCalendar';
 import DecorativeDivider from '../components/DecorativeDivider';
+import '../styles/ModernEventsCalendar.css';
 
 const EventsPage = () => {
   useEffect(() => {
-    AOS.refresh();
     // Scroll to top when page loads
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <main>
-      <div className="page-banner">
-        <div className="page-banner-content">
-          <h1>Events</h1>
-        </div>
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <ModernPageBanner
+        title="Divine Events"
+        subtitle="Join us for spiritual celebrations and gatherings throughout the year"
+        backgroundImage="/src/assets/images/gauripaurnima.jpg"
+      />
+
+      <div className="container section-padding">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <h2 className="section-title">Events Calendar</h2>
+          <p className="section-description">
+            Explore our upcoming events and festivals. Click on any event to see more details.
+            You can filter events by category or select a specific date to see what's happening.
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <ModernEventsCalendar />
+        </motion.div>
       </div>
-      
-      <div data-aos="fade-up">
-        <Events />
-      </div>
-      
-      <div data-aos="fade-up">
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
         <DecorativeDivider type="lotus" />
-      </div>
-      
-      <div className="events-additional" data-aos="fade-up">
+      </motion.div>
+
+      <div className="events-additional">
         <div className="container">
-          <h2 className="section-title">Upcoming Festivals</h2>
-          <div className="festivals-list">
-            <div className="festival-item">
-              <div className="festival-date">
-                <span className="month">May</span>
-                <span className="day">15</span>
-                <span className="year">2023</span>
-              </div>
-              <div className="festival-details">
-                <h3>Narasimha Chaturdashi</h3>
-                <p>Appearance day of Lord Narasimhadeva</p>
-                <p>Special abhisheka and arati at 6:00 PM</p>
-              </div>
-            </div>
-            
-            <div className="festival-item">
-              <div className="festival-date">
-                <span className="month">Jun</span>
-                <span className="day">22</span>
-                <span className="year">2023</span>
-              </div>
-              <div className="festival-details">
-                <h3>Panihati Cida Dahi Festival</h3>
-                <p>Celebration of Lord Nityananda's pastimes</p>
-                <p>Special chipped rice and yogurt prasadam</p>
-              </div>
-            </div>
-            
-            <div className="festival-item">
-              <div className="festival-date">
-                <span className="month">Jul</span>
-                <span className="day">3</span>
-                <span className="year">2023</span>
-              </div>
-              <div className="festival-details">
-                <h3>Ratha Yatra</h3>
-                <p>The famous chariot festival of Lord Jagannath</p>
-                <p>Procession starts at 4:00 PM from the temple</p>
-              </div>
-            </div>
-            
-            <div className="festival-item">
-              <div className="festival-date">
-                <span className="month">Aug</span>
-                <span className="day">19</span>
-                <span className="year">2023</span>
-              </div>
-              <div className="festival-details">
-                <h3>Sri Krishna Janmashtami</h3>
-                <p>Appearance day of Lord Krishna</p>
-                <p>Fasting till midnight, abhisheka at 11:30 PM</p>
-              </div>
-            </div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="section-title">Annual Major Festivals</h2>
+            <p className="section-description">
+              These are the major festivals we celebrate every year according to the Vedic calendar.
+              Join us for these special occasions filled with spiritual bliss and devotion.
+            </p>
+          </motion.div>
+
+          <div className="festivals-grid">
+            {[
+              {
+                name: "Gaura Purnima",
+                description: "Appearance day of Lord Chaitanya Mahaprabhu",
+                date: "March (varies yearly)",
+                image: "/src/assets/images/deities/Chaitanya-Mahaprabhu.jpg"
+              },
+              {
+                name: "Ram Navami",
+                description: "Appearance day of Lord Ramachandra",
+                date: "April (varies yearly)",
+                image: "/src/assets/images/rama-navami.jpg"
+              },
+              {
+                name: "Narasimha Chaturdashi",
+                description: "Appearance day of Lord Narasimhadeva",
+                date: "May (varies yearly)",
+                image: "/src/assets/images/deities/prahalada.jpg"
+              },
+              {
+                name: "Ratha Yatra",
+                description: "The chariot festival of Lord Jagannath",
+                date: "July (varies yearly)",
+                image: "/src/assets/images/deities/puri-jagannath.jpg"
+              },
+              {
+                name: "Janmashtami",
+                description: "Appearance day of Lord Krishna",
+                date: "August/September (varies yearly)",
+                image: "/src/assets/images/deities/krishnaflute.webp"
+              },
+              {
+                name: "Radhastami",
+                description: "Appearance day of Srimati Radharani",
+                date: "September (varies yearly)",
+                image: "/src/assets/images/deities/radhadevi.jpg"
+              }
+            ].map((festival, index) => (
+              <motion.div
+                className="festival-card"
+                key={festival.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 * index }}
+                viewport={{ once: true }}
+                whileHover={{
+                  y: -10,
+                  boxShadow: '0 20px 30px rgba(0, 0, 0, 0.1)'
+                }}
+              >
+                <div className="festival-image">
+                  <img src={festival.image} alt={festival.name} />
+                </div>
+                <div className="festival-content">
+                  <h3>{festival.name}</h3>
+                  <p className="festival-desc">{festival.description}</p>
+                  <p className="festival-date">{festival.date}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
-    </main>
+    </motion.main>
   );
 };
 

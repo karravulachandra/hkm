@@ -1,0 +1,373 @@
+.modern-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #1A237E, #0D47A1, #1A237E);
+  background-size: 200% 200%;
+  color: #fff;
+  overflow: hidden;
+  padding: 6rem 0 2rem;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/src/assets/images/krishnaradha.jpg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.text-highlight {
+  color: var(--secondary-color);
+  position: relative;
+  display: inline-block;
+}
+
+.text-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: rgba(255, 215, 0, 0.3);
+  z-index: -1;
+  transform: skewX(-15deg);
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.hero-mantra {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-left: 3px solid var(--secondary-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0 8px 8px 0;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.cta-button:hover::before {
+  width: 100%;
+}
+
+.cta-button.primary {
+  background-color: var(--primary-color);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(255, 127, 0, 0.4);
+}
+
+.cta-button.secondary {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid var(--secondary-color);
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+}
+
+.button-icon {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover .button-icon {
+  transform: translateX(5px);
+}
+
+.hero-image {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+}
+
+.image-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
+.deity-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 10px;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+.image-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.3) 0%, rgba(255, 215, 0, 0) 70%);
+  z-index: -1;
+  border-radius: 50%;
+  animation: pulse 4s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.floating-element {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.6;
+}
+
+.lotus-1 {
+  width: 60px;
+  height: 60px;
+  top: 10%;
+  left: 10%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23FFD700' d='M50 0 C60 30 90 40 90 60 C90 80 70 100 50 100 C30 100 10 80 10 60 C10 40 40 30 50 0'/%3E%3C/svg%3E");
+  animation: float 8s infinite ease-in-out;
+}
+
+.lotus-2 {
+  width: 40px;
+  height: 40px;
+  bottom: 15%;
+  right: 15%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23FFD700' d='M50 0 C60 30 90 40 90 60 C90 80 70 100 50 100 C30 100 10 80 10 60 C10 40 40 30 50 0'/%3E%3C/svg%3E");
+  animation: float 6s infinite ease-in-out reverse;
+}
+
+.chakra-1 {
+  width: 50px;
+  height: 50px;
+  top: 20%;
+  right: 20%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='none' stroke='%23FFD700' stroke-width='2'/%3E%3Cpath fill='%23FFD700' d='M50 5 L53 20 L60 10 L58 25 L70 18 L62 30 L75 28 L65 38 L80 40 L65 45 L80 50 L65 55 L80 60 L65 62 L75 72 L62 70 L70 82 L58 75 L60 90 L53 80 L50 95 L47 80 L40 90 L42 75 L30 82 L38 70 L25 72 L35 62 L20 60 L35 55 L20 50 L35 45 L20 40 L35 38 L25 28 L38 30 L30 18 L42 25 L40 10 L47 20 Z'/%3E%3C/svg%3E");
+  animation: spin 20s infinite linear;
+}
+
+.chakra-2 {
+  width: 30px;
+  height: 30px;
+  bottom: 25%;
+  left: 25%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='none' stroke='%23FFD700' stroke-width='2'/%3E%3Cpath fill='%23FFD700' d='M50 5 L53 20 L60 10 L58 25 L70 18 L62 30 L75 28 L65 38 L80 40 L65 45 L80 50 L65 55 L80 60 L65 62 L75 72 L62 70 L70 82 L58 75 L60 90 L53 80 L50 95 L47 80 L40 90 L42 75 L30 82 L38 70 L25 72 L35 62 L20 60 L35 55 L20 50 L35 45 L20 40 L35 38 L25 28 L38 30 L30 18 L42 25 L40 10 L47 20 Z'/%3E%3C/svg%3E");
+  animation: spin 15s infinite linear reverse;
+}
+
+.om-1 {
+  width: 40px;
+  height: 40px;
+  top: 60%;
+  right: 10%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23FFD700' d='M50,20c-16.6,0-30,13.4-30,30s13.4,30,30,30s30-13.4,30-30S66.6,20,50,20z M50,70c-11,0-20-9-20-20s9-20,20-20s20,9,20,20 S61,70,50,70z'/%3E%3Cpath fill='%23FFD700' d='M50,35c-8.3,0-15,6.7-15,15s6.7,15,15,15s15-6.7,15-15S58.3,35,50,35z M50,55c-2.8,0-5-2.2-5-5s2.2-5,5-5s5,2.2,5,5 S52.8,55,50,55z'/%3E%3C/svg%3E");
+  animation: float 10s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  z-index: 10;
+}
+
+.scroll-arrow {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 10px auto 0;
+  border-right: 2px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+  transform: rotate(45deg);
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-mantra {
+    border-left: none;
+    border-top: 3px solid var(--secondary-color);
+    border-radius: 0 0 8px 8px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .modern-hero {
+    padding-top: 5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-mantra {
+    font-size: 1rem;
+  }
+
+  .floating-element {
+    display: none;
+  }
+}

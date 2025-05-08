@@ -87,6 +87,438 @@
   line-height: 1.8;
 }
 
+.guru-parampara {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.guru-card {
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  width: 200px;
+  transition: all 0.3s ease;
+}
+
+.guru-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.guru-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.guru-card:hover .guru-image img {
+  transform: scale(1.05);
+}
+
+.guru-info {
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.guru-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+  font-family: 'Tiro Devanagari Sanskrit', serif;
+}
+
+.guru-info p {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin-bottom: 0;
+}
+
+.lineage-subtitle {
+  text-align: center;
+  margin: 3rem 0 2rem;
+  color: var(--primary-color);
+  font-family: 'Tiro Devanagari Sanskrit', serif;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.lineage-subtitle::before,
+.lineage-subtitle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 2px;
+  background-color: var(--secondary-color);
+}
+
+.lineage-subtitle::before {
+  left: calc(50% - 100px);
+}
+
+.lineage-subtitle::after {
+  right: calc(50% - 100px);
+}
+
+.lineage-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.lineage-image-card {
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.lineage-image {
+  height: 180px;
+  overflow: hidden;
+}
+
+.lineage-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.lineage-image-card:hover .lineage-image img {
+  transform: scale(1.05);
+}
+
+.lineage-caption {
+  padding: 1rem;
+  text-align: center;
+}
+
+.lineage-caption p {
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+/* Books Page Styles */
+.importance-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.importance-quote {
+  background-color: #f8f4e6;
+  padding: 2rem;
+  border-radius: 16px;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.importance-quote::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  font-size: 5rem;
+  color: var(--primary-color);
+  opacity: 0.3;
+  font-family: 'Georgia', serif;
+}
+
+.importance-quote blockquote {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--dark-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.importance-quote cite {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--primary-color);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.book-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.benefit-item {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.benefit-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem;
+}
+
+.benefit-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.benefit-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  font-family: 'Tiro Devanagari Sanskrit', serif;
+}
+
+.benefit-item p {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Donate Page Styles */
+.support-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.support-quote {
+  background-color: #f8f4e6;
+  padding: 2rem;
+  border-radius: 16px;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.support-quote::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  font-size: 5rem;
+  color: var(--primary-color);
+  opacity: 0.3;
+  font-family: 'Georgia', serif;
+}
+
+.support-quote blockquote {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--dark-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.support-quote cite {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--primary-color);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.support-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.benefit-card {
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.benefit-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.benefit-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.benefit-card:hover .benefit-image img {
+  transform: scale(1.05);
+}
+
+.benefit-content {
+  padding: 1.5rem;
+}
+
+.benefit-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: var(--primary-color);
+  font-family: 'Tiro Devanagari Sanskrit', serif;
+}
+
+.benefit-content p {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.tax-benefits {
+  background-color: #f8f8f8;
+  padding: 2rem;
+  border-radius: 16px;
+  margin-top: 2rem;
+}
+
+.tax-benefits h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  font-family: 'Tiro Devanagari Sanskrit', serif;
+}
+
+.tax-benefits p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.tax-note {
+  background-color: rgba(255, 127, 0, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+}
+
+/* Contact Page Styles */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-info-card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.info-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.info-header h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+  font-family: 'Tiro Devanagari Sanskrit', serif;
+}
+
+.info-header p {
+  color: var(--text-color);
+}
+
+.info-item {
+  display: flex;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.info-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.info-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.info-content {
+  flex: 1;
+}
+
+.info-content h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark-color);
+}
+
+.info-content p {
+  color: var(--text-color);
+  margin-bottom: 0.3rem;
+  line-height: 1.5;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+.social-link:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.social-link:hover svg path {
+  stroke: #fff;
+}
+
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info-card {
+    margin-top: 2rem;
+  }
+}
+
 /* Activities Page Additional Styles */
 .activities-additional {
   padding: 5rem 0;
@@ -195,27 +627,127 @@
   margin-bottom: 2rem;
 }
 
+/* Events Page Styles */
+.section-padding {
+  padding: 4rem 0;
+}
+
+.section-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+.festivals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.festival-card {
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.festival-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.festival-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.festival-card:hover .festival-image img {
+  transform: scale(1.05);
+}
+
+.festival-content {
+  padding: 1.5rem;
+}
+
+.festival-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: var(--primary-color);
+  font-family: 'Tiro Devanagari Sanskrit', serif;
+}
+
+.festival-desc {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.festival-date {
+  color: var(--accent-color-1);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .page-banner {
     height: 200px;
   }
-  
+
   .page-banner h1 {
     font-size: 2rem;
   }
-  
+
   .schedule-item {
     flex-direction: column;
   }
-  
+
   .schedule-day {
     padding: 1rem;
     min-width: auto;
   }
-  
+
   .welcome-buttons {
     flex-direction: column;
     gap: 1rem;
+  }
+
+  .festivals-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .festival-image {
+    height: 180px;
+  }
+
+  .lineage-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .lineage-image {
+    height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .festivals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lineage-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .section-padding {
+    padding: 3rem 0;
   }
 }

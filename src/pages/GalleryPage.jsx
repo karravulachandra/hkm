@@ -1,66 +1,102 @@
 import { useEffect } from 'react';
-import AOS from 'aos';
-import Gallery from '../components/Gallery';
+import { motion } from 'framer-motion';
+import ModernGallery from '../components/ModernGallery';
+import ModernPageBanner from '../components/ModernPageBanner';
 import DecorativeDivider from '../components/DecorativeDivider';
+import '../styles/ModernGallery.css';
+import '../styles/ModernPageBanner.css';
 
 const GalleryPage = () => {
   useEffect(() => {
-    AOS.refresh();
     // Scroll to top when page loads
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <main>
-      <div className="page-banner">
-        <div className="page-banner-content">
-          <h1>Gallery</h1>
-        </div>
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <ModernPageBanner
+        title="Divine Gallery"
+        subtitle="Explore the beauty of devotional art and sacred moments"
+        backgroundImage="/src/assets/images/krishnaradha.jpg"
+      />
+
+      <div className="container">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <ModernGallery />
+        </motion.div>
       </div>
-      
-      <div data-aos="fade-up">
-        <Gallery />
-      </div>
-      
-      <div data-aos="fade-up">
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
         <DecorativeDivider type="chakra" />
-      </div>
-      
-      <div className="gallery-additional" data-aos="fade-up">
+      </motion.div>
+
+      <div className="gallery-additional">
         <div className="container">
-          <h2 className="section-title">Festival Highlights</h2>
-          <div className="festival-highlights">
-            <p>
-              Throughout the year, we celebrate various Vaishnava festivals according to the Vedic calendar. 
-              These festivals are vibrant celebrations filled with kirtan, spiritual discourses, 
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="section-title">Festival Highlights</h2>
+          </motion.div>
+
+          <motion.div
+            className="festival-highlights"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <p className="highlight-intro">
+              Throughout the year, we celebrate various Vaishnava festivals according to the Vedic calendar.
+              These festivals are vibrant celebrations filled with kirtan, spiritual discourses,
               elaborate deity decorations, and delicious prasadam.
             </p>
+
             <div className="highlights-list">
-              <div className="highlight-item">
-                <h3>Janmashtami</h3>
-                <p>The appearance day of Lord Krishna</p>
-              </div>
-              <div className="highlight-item">
-                <h3>Gaura Purnima</h3>
-                <p>The appearance day of Lord Chaitanya Mahaprabhu</p>
-              </div>
-              <div className="highlight-item">
-                <h3>Rama Navami</h3>
-                <p>The appearance day of Lord Ramachandra</p>
-              </div>
-              <div className="highlight-item">
-                <h3>Ratha Yatra</h3>
-                <p>The chariot festival of Lord Jagannath</p>
-              </div>
-              <div className="highlight-item">
-                <h3>Diwali</h3>
-                <p>The festival of lights</p>
-              </div>
+              {[
+                { name: "Janmashtami", description: "The appearance day of Lord Krishna" },
+                { name: "Gaura Purnima", description: "The appearance day of Lord Chaitanya Mahaprabhu" },
+                { name: "Rama Navami", description: "The appearance day of Lord Ramachandra" },
+                { name: "Ratha Yatra", description: "The chariot festival of Lord Jagannath" },
+                { name: "Diwali", description: "The festival of lights" }
+              ].map((festival, index) => (
+                <motion.div
+                  className="highlight-item"
+                  key={festival.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 * index }}
+                  viewport={{ once: true }}
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)'
+                  }}
+                >
+                  <h3>{festival.name}</h3>
+                  <p>{festival.description}</p>
+                </motion.div>
+              ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </main>
+    </motion.main>
   );
 };
 
