@@ -6,15 +6,18 @@ const InteractiveMap = () => {
   const [activeTab, setActiveTab] = useState('map');
   const [isMapLoaded, setIsMapLoaded] = useState(false);
   const mapRef = useRef(null);
-  
+
   // Guntur coordinates
   const latitude = 16.3067;
   const longitude = 80.4365;
-  
-  // Temple location (approximate - replace with actual coordinates)
-  const templeLatitude = 16.3067;
-  const templeLongitude = 80.4365;
-  
+
+  // Temple location (exact coordinates from Google Maps link)
+  const templeLatitude = 16.3114;
+  const templeLongitude = 80.4342;
+
+  // Google Maps link for the temple
+  const googleMapsLink = "https://maps.app.goo.gl/HBw5hdrhWd42b6vF6";
+
   useEffect(() => {
     // Load Google Maps API script
     const loadGoogleMapsAPI = () => {
@@ -25,11 +28,11 @@ const InteractiveMap = () => {
       window.initMap = initMap;
       document.head.appendChild(googleMapsScript);
     };
-    
+
     // Initialize map
     const initMap = () => {
       if (!mapRef.current) return;
-      
+
       const map = new window.google.maps.Map(mapRef.current, {
         center: { lat: templeLatitude, lng: templeLongitude },
         zoom: 15,
@@ -96,7 +99,7 @@ const InteractiveMap = () => {
           }
         ]
       });
-      
+
       // Add marker for temple location
       const marker = new window.google.maps.Marker({
         position: { lat: templeLatitude, lng: templeLongitude },
@@ -114,7 +117,7 @@ const InteractiveMap = () => {
           anchor: new window.google.maps.Point(20, 40),
         }
       });
-      
+
       // Add info window
       const infoWindow = new window.google.maps.InfoWindow({
         content: `
@@ -122,34 +125,35 @@ const InteractiveMap = () => {
             <h3>Hare Krishna Cultural Centre</h3>
             <p>Opp. Orion Hotel, Near RTO Office, JKC College Road, Guntur, Andhra Pradesh</p>
             <p>Phone: 9849994873</p>
+            <p><a href="${googleMapsLink}" target="_blank" rel="noopener noreferrer" style="color: #FF7F00; font-weight: bold;">View on Google Maps</a></p>
           </div>
         `
       });
-      
+
       marker.addListener('click', () => {
         infoWindow.open(map, marker);
       });
-      
+
       // Open info window by default
       infoWindow.open(map, marker);
-      
+
       setIsMapLoaded(true);
     };
-    
+
     // For demo purposes, we'll use a placeholder instead of loading the actual Google Maps API
     // In a real application, uncomment the loadGoogleMapsAPI() call
     // loadGoogleMapsAPI();
-    
+
     // Placeholder for demo
     setTimeout(() => {
       setIsMapLoaded(true);
     }, 1000);
   }, []);
-  
+
   return (
     <div className="interactive-map-container">
       <div className="map-tabs">
-        <button 
+        <button
           className={`map-tab ${activeTab === 'map' ? 'active' : ''}`}
           onClick={() => setActiveTab('map')}
         >
@@ -162,7 +166,7 @@ const InteractiveMap = () => {
             />
           )}
         </button>
-        <button 
+        <button
           className={`map-tab ${activeTab === 'directions' ? 'active' : ''}`}
           onClick={() => setActiveTab('directions')}
         >
@@ -175,7 +179,7 @@ const InteractiveMap = () => {
             />
           )}
         </button>
-        <button 
+        <button
           className={`map-tab ${activeTab === 'street' ? 'active' : ''}`}
           onClick={() => setActiveTab('street')}
         >
@@ -189,12 +193,12 @@ const InteractiveMap = () => {
           )}
         </button>
       </div>
-      
+
       <div className="map-content">
         {activeTab === 'map' && (
           <div className="map-view">
-            <div 
-              ref={mapRef} 
+            <div
+              ref={mapRef}
               className={`map-container ${isMapLoaded ? 'loaded' : 'loading'}`}
             >
               {!isMapLoaded && (
@@ -203,24 +207,40 @@ const InteractiveMap = () => {
                   <p>Loading map...</p>
                 </div>
               )}
-              
+
               {/* Placeholder map image for demo */}
               <div className="placeholder-map">
-                <img src="https://i.imgur.com/Yd8MhUZ.png" alt="Map placeholder" />
-                <div className="map-marker">
-                  <div className="marker-pin"></div>
-                  <div className="marker-pulse"></div>
-                </div>
+                <a href={googleMapsLink} target="_blank" rel="noopener noreferrer" className="map-link">
+                  <img src="https://i.imgur.com/Yd8MhUZ.png" alt="Map placeholder" />
+                  <div className="map-marker">
+                    <div className="marker-pin"></div>
+                    <div className="marker-pulse"></div>
+                  </div>
+                  <div className="map-overlay">
+                    <span>Click to open in Google Maps</span>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
         )}
-        
+
         {activeTab === 'directions' && (
           <div className="directions-view">
             <div className="directions-content">
               <h3>How to Reach Us</h3>
-              
+
+              <div className="get-directions-button">
+                <a href={googleMapsLink} target="_blank" rel="noopener noreferrer" className="directions-link">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" strokeWidth="2"/>
+                    <path d="M13 8L9 12L13 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M9 12H17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  Get Directions on Google Maps
+                </a>
+              </div>
+
               <div className="direction-item">
                 <div className="direction-icon">
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -232,12 +252,12 @@ const InteractiveMap = () => {
                 <div className="direction-text">
                   <h4>By Car</h4>
                   <p>
-                    Located on JKC College Road, opposite to Orion Hotel and near RTO Office. 
+                    Located on JKC College Road, opposite to Orion Hotel and near RTO Office.
                     Parking is available at the temple premises.
                   </p>
                 </div>
               </div>
-              
+
               <div className="direction-item">
                 <div className="direction-icon">
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -254,7 +274,7 @@ const InteractiveMap = () => {
                   </p>
                 </div>
               </div>
-              
+
               <div className="direction-item">
                 <div className="direction-icon">
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -274,12 +294,17 @@ const InteractiveMap = () => {
             </div>
           </div>
         )}
-        
+
         {activeTab === 'street' && (
           <div className="street-view">
             <div className="street-view-container">
-              {/* Placeholder street view image for demo */}
-              <img src="https://i.imgur.com/8NqKtJl.png" alt="Street view placeholder" className="street-view-image" />
+              {/* Placeholder street view image with link to Google Maps */}
+              <a href={googleMapsLink} target="_blank" rel="noopener noreferrer" className="street-view-link">
+                <img src="https://i.imgur.com/8NqKtJl.png" alt="Street view placeholder" className="street-view-image" />
+                <div className="street-view-overlay">
+                  <span>View Street View on Google Maps</span>
+                </div>
+              </a>
               <div className="street-view-controls">
                 <button className="street-control left">←</button>
                 <button className="street-control right">→</button>
