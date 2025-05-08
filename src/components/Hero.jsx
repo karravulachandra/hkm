@@ -5,27 +5,27 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 const Hero = () => {
   const carouselImages = [
     {
-      url: '/src/assets/images/deities/krishnaradha.jpg',
+      url: './assets/images/deities/krishnaradha.jpg',
       alt: 'Radha Krishna Deities'
     },
     {
-      url: '/src/assets/images/deities/nitay.jpg',
+      url: './assets/images/deities/nitay.jpg',
       alt: 'Lord Venkateshwara'
     },
     {
-      url: '/src/assets/images/puri-temple.jpg',
+      url: './assets/images/puri-temple.jpg',
       alt: 'Temple Architecture'
     },
     {
-      url: '/src/assets/images/deities/srilaprabhupada.jpg',
+      url: './assets/images/deities/srilaprabhupada.jpg',
       alt: 'Srila Prabhupada'
     },
     {
-      url: '/src/assets/images/deities/Chaitanya-Mahaprabhu.jpg',
+      url: './assets/images/deities/Chaitanya-Mahaprabhu.jpg',
       alt: 'Sri Chaitanya Mahaprabhu'
     },
     {
-      url: '/src/assets/images/deities/prahalada.jpg',
+      url: './assets/images/deities/prahalada.jpg',
       alt: 'Lord Narasimha and Prahlada'
     }
   ];

@@ -93,7 +93,7 @@ const ModernHero = () => {
         >
           <div className="image-container" ref={imageRef}>
             <img
-              src="/src/assets/images/krishnaflute.webp"
+              src="./assets/images/krishnaflute.webp"
               alt="Lord Krishna with flute"
               className="deity-image"
             />

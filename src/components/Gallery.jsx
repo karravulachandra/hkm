@@ -8,37 +8,37 @@ const Gallery = () => {
   const deityImages = [
     {
       id: 1,
-      url: '/src/assets/images/deities/krishnaflute.webp',
+      url: './assets/images/deities/krishnaflute.webp',
       title: 'Lord Krishna',
       description: 'The Supreme Personality of Godhead'
     },
     {
       id: 2,
-      url: '/src/assets/images/deities/krishnaradha.jpg',
+      url: './assets/images/deities/krishnaradha.jpg',
       title: 'Srimati Radharani',
       description: 'The embodiment of divine love and devotion'
     },
     {
       id: 3,
-      url: '/src/assets/images/deities/nitay.jpg',
+      url: './assets/images/deities/nitay.jpg',
       title: 'Lord Venkateshwara',
       description: 'The Lord of Seven Hills'
     },
     {
       id: 4,
-      url: '/src/assets/images/deities/prahalada.jpg',
+      url: './assets/images/deities/prahalada.jpg',
       title: 'Prahalada Maharaja',
       description: 'The great devotee of Lord Narasimha'
     },
     {
       id: 5,
-      url: '/src/assets/images/deities/srilaprabhupada.jpg',
+      url: './assets/images/deities/srilaprabhupada.jpg',
       title: 'Srila Prabhupada',
       description: 'Founder-Acharya of ISKCON'
     },
     {
       id: 6,
-      url: '/src/assets/images/deities/Chaitanya-Mahaprabhu.jpg',
+      url: './assets/images/deities/Chaitanya-Mahaprabhu.jpg',
       title: 'Lord Chaitanya Mahaprabhu',
       description: 'The golden avatar of Lord Krishna'
     }
@@ -47,19 +47,19 @@ const Gallery = () => {
   const templeImages = [
     {
       id: 7,
-      url: '/src/assets/images/radhadevi.jpg',
+      url: './assets/images/radhadevi.jpg',
       title: 'Janmashtami Celebration',
       description: 'Annual celebration of Lord Krishna\'s appearance day'
     },
     {
       id: 8,
-      url: '/src/assets/images/puri-jagannath.jpg',
+      url: './assets/images/puri-jagannath.jpg',
       title: 'Evening Kirtan',
       description: 'Devotees engaged in congregational chanting'
     },
     {
       id: 9,
-      url: '/src/assets/images/food-distribution.png',
+      url: './assets/images/food-distribution.png',
       title: 'Sunday Feast',
       description: 'Weekly feast program with spiritual food distribution'
     }
